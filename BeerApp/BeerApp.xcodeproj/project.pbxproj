@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		20545E8724A768530001930E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20545E8624A768530001930E /* AppDelegate.swift */; };
 		20545E8924A768530001930E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20545E8824A768530001930E /* SceneDelegate.swift */; };
-		20545E8B24A768530001930E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20545E8A24A768530001930E /* ViewController.swift */; };
 		20545E8E24A768530001930E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20545E8C24A768530001930E /* Main.storyboard */; };
 		20545E9024A768540001930E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20545E8F24A768540001930E /* Assets.xcassets */; };
 		20545E9324A768540001930E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20545E9124A768540001930E /* LaunchScreen.storyboard */; };
+		20A1BE1724AB736200615BAB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A1BE1624AB736200615BAB /* TabBarController.swift */; };
+		20A1BE1924AB738600615BAB /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A1BE1824AB738600615BAB /* ListViewController.swift */; };
+		20A1BE1B24AB738E00615BAB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A1BE1A24AB738E00615BAB /* SearchViewController.swift */; };
+		20A1BE1F24AB74AB00615BAB /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A1BE1D24AB74AB00615BAB /* search.png */; };
+		20A1BE2024AB74AB00615BAB /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A1BE1E24AB74AB00615BAB /* list.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		20545E8324A768530001930E /* BeerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20545E8624A768530001930E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20545E8824A768530001930E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		20545E8A24A768530001930E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		20545E8D24A768530001930E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		20545E8F24A768540001930E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20545E9224A768540001930E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20545E9424A768540001930E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20A1BE1624AB736200615BAB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		20A1BE1824AB738600615BAB /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		20A1BE1A24AB738E00615BAB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		20A1BE1D24AB74AB00615BAB /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		20A1BE1E24AB74AB00615BAB /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +66,33 @@
 			children = (
 				20545E8624A768530001930E /* AppDelegate.swift */,
 				20545E8824A768530001930E /* SceneDelegate.swift */,
-				20545E8A24A768530001930E /* ViewController.swift */,
 				20545E8C24A768530001930E /* Main.storyboard */,
 				20545E8F24A768540001930E /* Assets.xcassets */,
 				20545E9124A768540001930E /* LaunchScreen.storyboard */,
 				20545E9424A768540001930E /* Info.plist */,
+				20A1BE1C24AB746F00615BAB /* Resource */,
+				20A1BE1524AB721100615BAB /* VC */,
 			);
 			path = BeerApp;
+			sourceTree = "<group>";
+		};
+		20A1BE1524AB721100615BAB /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				20A1BE1624AB736200615BAB /* TabBarController.swift */,
+				20A1BE1824AB738600615BAB /* ListViewController.swift */,
+				20A1BE1A24AB738E00615BAB /* SearchViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		20A1BE1C24AB746F00615BAB /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				20A1BE1E24AB74AB00615BAB /* list.png */,
+				20A1BE1D24AB74AB00615BAB /* search.png */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +154,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				20545E9324A768540001930E /* LaunchScreen.storyboard in Resources */,
+				20A1BE2024AB74AB00615BAB /* list.png in Resources */,
 				20545E9024A768540001930E /* Assets.xcassets in Resources */,
 				20545E8E24A768530001930E /* Main.storyboard in Resources */,
+				20A1BE1F24AB74AB00615BAB /* search.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +168,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20545E8B24A768530001930E /* ViewController.swift in Sources */,
+				20A1BE1B24AB738E00615BAB /* SearchViewController.swift in Sources */,
+				20A1BE1724AB736200615BAB /* TabBarController.swift in Sources */,
 				20545E8724A768530001930E /* AppDelegate.swift in Sources */,
+				20A1BE1924AB738600615BAB /* ListViewController.swift in Sources */,
 				20545E8924A768530001930E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
