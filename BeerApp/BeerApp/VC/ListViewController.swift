@@ -9,23 +9,55 @@
 import UIKit
 
 class ListViewController: UIViewController {
+    
+    private let BeerListTableView: UITableView = {
+        var BeerListTableView: UITableView = UITableView()
+        BeerListTableView.register(BeerListTableViewCell.self, forCellReuseIdentifier: BeerListTableViewCell.reuseIdentifier)
+        return BeerListTableView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .systemPink
+        
+        view.backgroundColor = .white
         self.title = "목록"
+        
+        self.BeerListTableView.rowHeight = 200
+        
+        BeerListTableView.delegate = self
+        BeerListTableView.dataSource = self
+        
+        setUpBeerListTableView()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setUpBeerListTableView() {
+        let guide = self.view.safeAreaLayoutGuide
+        
+        self.view.addSubview(BeerListTableView)
+        
+        BeerListTableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            BeerListTableView.topAnchor.constraint(equalTo: guide.topAnchor),
+            BeerListTableView.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
+            BeerListTableView.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
+            BeerListTableView.bottomAnchor.constraint(equalTo: guide.bottomAnchor),
+        ])
     }
-    */
 
+}
+
+extension ListViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: BeerListTableViewCell.reuseIdentifier, for: indexPath) as? BeerListTableViewCell else {
+            return UITableViewCell()
+        }
+        return cell
+    }
+    
+    
 }
