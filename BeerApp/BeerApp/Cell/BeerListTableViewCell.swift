@@ -19,10 +19,19 @@ class BeerListTableViewCell: UITableViewCell {
         return beerImageView
     }()
     
+    private let beerIdLabel: UILabel = {
+        var beerIdLabel: UILabel = UILabel()
+        beerIdLabel.backgroundColor = .systemPink
+        beerIdLabel.textAlignment = .left
+        beerIdLabel.text = "1"
+        return beerIdLabel
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         setUpBeerImageView()
+        setUpBeerIdLabel()
     }
     
     required init?(coder: NSCoder) {
@@ -48,13 +57,26 @@ class BeerListTableViewCell: UITableViewCell {
         contentView.addSubview(beerImageView)
         
         NSLayoutConstraint.activate([
-            beerImageView.topAnchor.constraint(equalTo: guide.topAnchor),
-            beerImageView.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
-            beerImageView.bottomAnchor.constraint(equalTo: guide.bottomAnchor),
+            beerImageView.topAnchor.constraint(equalTo: guide.topAnchor, constant: 20),
+            beerImageView.leadingAnchor.constraint(equalTo: guide.leadingAnchor, constant: 30),
+            beerImageView.bottomAnchor.constraint(equalTo: guide.bottomAnchor, constant: -20),
             beerImageView.widthAnchor.constraint(equalTo: guide.widthAnchor, multiplier: 0.3),
-            // 나중에 API 데이터 받아와서 thumbnail 이미지 크기에 맞춰 유동적으로 변경.
-//            beerImageView.heightAnchor.constraint(equalToConstant: 150),
         ])
     }
+    
+    private func setUpBeerIdLabel() {
+        let guide = self.contentView.safeAreaLayoutGuide
 
+        beerIdLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        contentView.addSubview(beerIdLabel)
+
+        NSLayoutConstraint.activate([
+            beerIdLabel.topAnchor.constraint(equalTo: guide.topAnchor, constant: 20),
+            beerIdLabel.leadingAnchor.constraint(equalTo: beerImageView.trailingAnchor, constant: 30),
+            beerIdLabel.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
+            beerIdLabel.heightAnchor.constraint(equalTo: guide.heightAnchor, multiplier: 0.2),
+        ])
+    }
+    
 }

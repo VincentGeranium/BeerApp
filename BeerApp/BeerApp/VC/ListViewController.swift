@@ -22,7 +22,8 @@ class ListViewController: UIViewController {
         view.backgroundColor = .white
         self.title = "목록"
         
-        self.BeerListTableView.rowHeight = 200
+        self.BeerListTableView.rowHeight = 250
+//        self.BeerListTableView.rowHeight = UITableView.automaticDimension
         
         BeerListTableView.delegate = self
         BeerListTableView.dataSource = self

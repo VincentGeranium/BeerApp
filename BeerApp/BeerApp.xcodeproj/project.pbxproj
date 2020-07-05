@@ -74,11 +74,19 @@
 				20545E8F24A768540001930E /* Assets.xcassets */,
 				20545E9124A768540001930E /* LaunchScreen.storyboard */,
 				20545E9424A768540001930E /* Info.plist */,
-				20F1F90E24AE368E00D9A63D /* Cell */,
 				20A1BE1C24AB746F00615BAB /* Resource */,
+				207D9DF624B2148A00C58FEF /* Model */,
 				20A1BE1524AB721100615BAB /* VC */,
+				20F1F90E24AE368E00D9A63D /* Cell */,
 			);
 			path = BeerApp;
+			sourceTree = "<group>";
+		};
+		207D9DF624B2148A00C58FEF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		20A1BE1524AB721100615BAB /* VC */ = {
