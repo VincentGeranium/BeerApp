@@ -49,33 +49,36 @@ class BeerListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func guide() -> UILayoutGuide {
+        let guide: Guide = Guide(view: self)
+        return guide.guide()
+    }
+    
     private func setUpBeerImageView() {
-        let guide = self.contentView.safeAreaLayoutGuide
         
         beerImageView.translatesAutoresizingMaskIntoConstraints = false
         
         contentView.addSubview(beerImageView)
         
         NSLayoutConstraint.activate([
-            beerImageView.topAnchor.constraint(equalTo: guide.topAnchor, constant: 20),
-            beerImageView.leadingAnchor.constraint(equalTo: guide.leadingAnchor, constant: 30),
-            beerImageView.bottomAnchor.constraint(equalTo: guide.bottomAnchor, constant: -20),
-            beerImageView.widthAnchor.constraint(equalTo: guide.widthAnchor, multiplier: 0.3),
+            beerImageView.topAnchor.constraint(equalTo: guide().topAnchor, constant: 20),
+            beerImageView.leadingAnchor.constraint(equalTo: guide().leadingAnchor, constant: 30),
+            beerImageView.bottomAnchor.constraint(equalTo: guide().bottomAnchor, constant: -20),
+            beerImageView.widthAnchor.constraint(equalTo: guide().widthAnchor, multiplier: 0.3),
         ])
     }
     
     private func setUpBeerIdLabel() {
-        let guide = self.contentView.safeAreaLayoutGuide
 
         beerIdLabel.translatesAutoresizingMaskIntoConstraints = false
 
         contentView.addSubview(beerIdLabel)
 
         NSLayoutConstraint.activate([
-            beerIdLabel.topAnchor.constraint(equalTo: guide.topAnchor, constant: 20),
+            beerIdLabel.topAnchor.constraint(equalTo: guide().topAnchor, constant: 20),
             beerIdLabel.leadingAnchor.constraint(equalTo: beerImageView.trailingAnchor, constant: 30),
-            beerIdLabel.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
-            beerIdLabel.heightAnchor.constraint(equalTo: guide.heightAnchor, multiplier: 0.2),
+            beerIdLabel.trailingAnchor.constraint(equalTo: guide().trailingAnchor),
+            beerIdLabel.heightAnchor.constraint(equalTo: guide().heightAnchor, multiplier: 0.2),
         ])
     }
     

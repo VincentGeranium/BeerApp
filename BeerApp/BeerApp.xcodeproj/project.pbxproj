@@ -12,6 +12,7 @@
 		20545E8E24A768530001930E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20545E8C24A768530001930E /* Main.storyboard */; };
 		20545E9024A768540001930E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20545E8F24A768540001930E /* Assets.xcassets */; };
 		20545E9324A768540001930E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20545E9124A768540001930E /* LaunchScreen.storyboard */; };
+		205F528724B225DB002EA72A /* Guide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F528624B225DB002EA72A /* Guide.swift */; };
 		20A1BE1724AB736200615BAB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A1BE1624AB736200615BAB /* TabBarController.swift */; };
 		20A1BE1924AB738600615BAB /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A1BE1824AB738600615BAB /* ListViewController.swift */; };
 		20A1BE1B24AB738E00615BAB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A1BE1A24AB738E00615BAB /* SearchViewController.swift */; };
@@ -29,6 +30,7 @@
 		20545E8F24A768540001930E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20545E9224A768540001930E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20545E9424A768540001930E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		205F528624B225DB002EA72A /* Guide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guide.swift; sourceTree = "<group>"; };
 		20A1BE1624AB736200615BAB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		20A1BE1824AB738600615BAB /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		20A1BE1A24AB738E00615BAB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		207D9DF624B2148A00C58FEF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				205F528624B225DB002EA72A /* Guide.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				20A1BE1724AB736200615BAB /* TabBarController.swift in Sources */,
 				20545E8724A768530001930E /* AppDelegate.swift in Sources */,
 				20A1BE1924AB738600615BAB /* ListViewController.swift in Sources */,
+				205F528724B225DB002EA72A /* Guide.swift in Sources */,
 				20545E8924A768530001930E /* SceneDelegate.swift in Sources */,
 				20F1F91024AE36D900D9A63D /* BeerListTableViewCell.swift in Sources */,
 			);
