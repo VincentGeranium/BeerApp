@@ -143,7 +143,7 @@ class BeerListTableViewCell: UITableViewCell {
             beerDescriptionLabel.topAnchor.constraint(equalTo: beerNameLabel.bottomAnchor),
             beerDescriptionLabel.leadingAnchor.constraint(equalTo: beerImageView.trailingAnchor, constant: 30),
             beerDescriptionLabel.trailingAnchor.constraint(equalTo: guide().trailingAnchor),
-            beerDescriptionLabel.bottomAnchor.constraint(equalTo: guide().bottomAnchor),
+            beerDescriptionLabel.bottomAnchor.constraint(equalTo: guide().bottomAnchor, constant: -20),
         ])
     }
     
