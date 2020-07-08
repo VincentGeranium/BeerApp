@@ -23,7 +23,7 @@ class BeerListTableViewCell: UITableViewCell {
         var beerIdLabel: UILabel = UILabel()
         beerIdLabel.backgroundColor = .systemPink
         beerIdLabel.textAlignment = .left
-        beerIdLabel.textColor = UIColor.systemGray
+        beerIdLabel.textColor = UIColor.brown
         beerIdLabel.text = "1"
         return beerIdLabel
     }()

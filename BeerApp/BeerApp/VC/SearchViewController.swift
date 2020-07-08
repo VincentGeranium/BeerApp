@@ -28,8 +28,9 @@ class SearchViewController: UIViewController {
         
         self.searchTableView.delegate = self
         self.searchTableView.dataSource = self
-//        self.searchTableView.separatorStyle = .none
-        self.searchTableView.rowHeight = UITableView.automaticDimension
+        self.searchTableView.separatorStyle = .none
+        self.searchTableView.rowHeight = 680
+//        self.searchTableView.rowHeight = UITableView.automaticDimension
         self.view.backgroundColor = .systemOrange
         self.title = "ID 검색"
         
