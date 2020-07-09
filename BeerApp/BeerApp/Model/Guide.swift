@@ -21,7 +21,7 @@ struct Guide {
     
     var safeAreaGuide: UILayoutGuide {
         get {
-            return self.cell.safeAreaLayoutGuide
+            return self.cell.contentView.safeAreaLayoutGuide
         }
     }
 }
