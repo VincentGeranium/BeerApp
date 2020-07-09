@@ -87,9 +87,10 @@ class BeerListTableViewCell: UITableViewCell {
     }
     
     func guide() -> UILayoutGuide {
-        let guide: Guide = Guide(view: self)
-        return guide.guide()
+        let guide  = Guide(cell: self).safeAreaGuide
+        return guide
     }
+    
     
     private func setUpBeerImageView() {
         

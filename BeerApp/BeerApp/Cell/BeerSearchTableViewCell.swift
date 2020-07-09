@@ -87,38 +87,38 @@ class BeerSearchTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func guide() -> UILayoutGuide {
+        let guide  = Guide(cell: self).safeAreaGuide
+        return guide
+    }
+    
     private func setUpSearchBeerImageView() {
-        let guide = self.contentView.safeAreaLayoutGuide
-        
         searchBeerImageView.translatesAutoresizingMaskIntoConstraints = false
         
         contentView.addSubview(searchBeerImageView)
         
         NSLayoutConstraint.activate([
-            searchBeerImageView.topAnchor.constraint(equalTo: guide.topAnchor, constant: 20),
-            searchBeerImageView.centerXAnchor.constraint(equalTo: guide.centerXAnchor),
-            searchBeerImageView.widthAnchor.constraint(equalTo: guide.widthAnchor, multiplier: 0.3),
-            searchBeerImageView.bottomAnchor.constraint(equalTo: guide.bottomAnchor, constant: -350),
+            searchBeerImageView.topAnchor.constraint(equalTo: guide().topAnchor, constant: 20),
+            searchBeerImageView.centerXAnchor.constraint(equalTo: guide().centerXAnchor),
+            searchBeerImageView.widthAnchor.constraint(equalTo: guide().widthAnchor, multiplier: 0.3),
+            searchBeerImageView.bottomAnchor.constraint(equalTo: guide().bottomAnchor, constant: -350),
         ])
     }
     
     private func setUpSearchBeerIdLabel() {
-        let guide = self.contentView.safeAreaLayoutGuide
-        
         searchBeerIdLabel.translatesAutoresizingMaskIntoConstraints = false
         
         contentView.addSubview(searchBeerIdLabel)
         
         NSLayoutConstraint.activate([
             searchBeerIdLabel.topAnchor.constraint(equalTo: searchBeerImageView.bottomAnchor, constant: 20),
-            searchBeerIdLabel.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
-            searchBeerIdLabel.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
+            searchBeerIdLabel.leadingAnchor.constraint(equalTo: guide().leadingAnchor),
+            searchBeerIdLabel.trailingAnchor.constraint(equalTo: guide().trailingAnchor),
             searchBeerIdLabel.heightAnchor.constraint(equalToConstant: 20),
         ])
     }
     
     private func setUpSearchBeerNameLabel() {
-        let guide = self.contentView.safeAreaLayoutGuide
         
         searchBeerNameLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -126,24 +126,22 @@ class BeerSearchTableViewCell: UITableViewCell {
         
         NSLayoutConstraint.activate([
             searchBeerNameLabel.topAnchor.constraint(equalTo: searchBeerIdLabel.bottomAnchor, constant: 20),
-            searchBeerNameLabel.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
-            searchBeerNameLabel.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
+            searchBeerNameLabel.leadingAnchor.constraint(equalTo: guide().leadingAnchor),
+            searchBeerNameLabel.trailingAnchor.constraint(equalTo: guide().trailingAnchor),
             searchBeerNameLabel.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
     
     private func setUpSearchBeerDescriptionLabel() {
-        let guide = self.contentView.safeAreaLayoutGuide
-        
         searchBeerDescriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         
         contentView.addSubview(searchBeerDescriptionLabel)
         
         NSLayoutConstraint.activate([
             searchBeerDescriptionLabel.topAnchor.constraint(equalTo: searchBeerNameLabel.bottomAnchor, constant: 20),
-            searchBeerDescriptionLabel.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
-            searchBeerDescriptionLabel.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
-            searchBeerDescriptionLabel.bottomAnchor.constraint(equalTo: guide.bottomAnchor, constant: -40),
+            searchBeerDescriptionLabel.leadingAnchor.constraint(equalTo: guide().leadingAnchor),
+            searchBeerDescriptionLabel.trailingAnchor.constraint(equalTo: guide().trailingAnchor),
+            searchBeerDescriptionLabel.bottomAnchor.constraint(equalTo: guide().bottomAnchor, constant: -40),
         ])
         
     }

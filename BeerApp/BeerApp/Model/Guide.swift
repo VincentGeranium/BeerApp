@@ -9,9 +9,19 @@
 import Foundation
 import UIKit
 
+//struct Guide {
+//    let view: UITableViewCell
+//    func guide() -> UILayoutGuide {
+//        return view.contentView.safeAreaLayoutGuide
+//    }
+//}
+
 struct Guide {
-    let view: UITableViewCell
-    func guide() -> UILayoutGuide {
-        return view.contentView.safeAreaLayoutGuide
+    var cell: UITableViewCell
+    
+    var safeAreaGuide: UILayoutGuide {
+        get {
+            return self.cell.safeAreaLayoutGuide
+        }
     }
 }
