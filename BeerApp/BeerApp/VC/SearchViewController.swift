@@ -22,6 +22,8 @@ class SearchViewController: UIViewController {
         searchTableView.register(BeerSearchTableViewCell.self, forCellReuseIdentifier: BeerSearchTableViewCell.reuseIdentifier)
         return searchTableView
     }()
+    
+    var searchResult: [Beers] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
