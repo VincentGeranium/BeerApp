@@ -65,7 +65,6 @@
 				20545E8C24A768530001930E /* Main.storyboard */,
 				20545E8F24A768540001930E /* Assets.xcassets */,
 				20545E9124A768540001930E /* LaunchScreen.storyboard */,
-				20545E9424A768540001930E /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -97,6 +96,7 @@
 		20545E8524A768530001930E /* BeerApp */ = {
 			isa = PBXGroup;
 			children = (
+				20545E9424A768540001930E /* Info.plist */,
 				200943FE24C9C70C003F7E19 /* Supporting Files */,
 				20A1BE1C24AB746F00615BAB /* Resource */,
 				207D9DF624B2148A00C58FEF /* Model */,
