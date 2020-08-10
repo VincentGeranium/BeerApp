@@ -14,7 +14,7 @@ class BeerListTableViewCell: UITableViewCell {
     
     private let beerImageView: UIImageView = {
         var beerImageView: UIImageView = UIImageView()
-        beerImageView.image = .init(imageLiteralResourceName: "keg.png")
+//        beerImageView.image = .init(imageLiteralResourceName: "keg.png")
         beerImageView.backgroundColor = .systemOrange
         return beerImageView
     }()
@@ -24,7 +24,7 @@ class BeerListTableViewCell: UITableViewCell {
         beerIdLabel.backgroundColor = .systemPink
         beerIdLabel.textAlignment = .left
         beerIdLabel.textColor = UIColor.brown
-        beerIdLabel.text = "1"
+//        beerIdLabel.text = "1"
         return beerIdLabel
     }()
     
@@ -33,7 +33,7 @@ class BeerListTableViewCell: UITableViewCell {
         beerNameLabel.backgroundColor = .systemPurple
         beerNameLabel.textAlignment = .left
         beerNameLabel.font = UIFont.boldSystemFont(ofSize: 20)
-        beerNameLabel.text = "Buzz"
+//        beerNameLabel.text = "Buzz"
         return beerNameLabel
     }()
     
@@ -44,21 +44,21 @@ class BeerListTableViewCell: UITableViewCell {
         beerDescriptionLabel.lineBreakMode = .byWordWrapping
         beerDescriptionLabel.numberOfLines = 0
         beerDescriptionLabel.textColor = UIColor.systemGray
-        beerDescriptionLabel.text = """
-        I'm on my second guess Or maybe my second best
-        What do I have to do?
-        To know that I'm getting through
-        I don't have much to say Just hoping you'd come my way What do
-        I have to do? To come and get close to you Come get close to you Baby
-        I won't slow down and
-        I won't say when Tell me why
-        I be comin' round again
-        I'm ready to go again Baby
-        I won't slow down and
-        I won't say no Just one look and
-        I think it starts to show
-        I think that I already know
-        """
+//        beerDescriptionLabel.text = """
+//        I'm on my second guess Or maybe my second best
+//        What do I have to do?
+//        To know that I'm getting through
+//        I don't have much to say Just hoping you'd come my way What do
+//        I have to do? To come and get close to you Come get close to you Baby
+//        I won't slow down and
+//        I won't say when Tell me why
+//        I be comin' round again
+//        I'm ready to go again Baby
+//        I won't slow down and
+//        I won't say no Just one look and
+//        I think it starts to show
+//        I think that I already know
+//        """
         return beerDescriptionLabel
     }()
     

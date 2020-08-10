@@ -36,9 +36,15 @@ class QueryService {
                 if let error = error {
                     self.errorMessage += "DataTask Error : " + error.localizedDescription + "/n"
                 } else if let data = data, let respones = respones as? HTTPURLResponse, respones.statusCode == 200 {
+                    self.updateSearchResult(data)
                     
+                    DispatchQueue.main.async {
+                        completion(self.beers, self.errorMessage)
+                    }
                 }
+                print("Response Data=\(String(data: data!, encoding: .utf8)!)")
             }
+            dataTask?.resume()
         }
     }
     
@@ -48,7 +54,29 @@ class QueryService {
         beers.removeAll()
         
         do {
-//            response 
+            response = try JSONSerialization.jsonObject(with: data, options: []) as? JSONDictionary
+        } catch let parseError as NSError {
+            errorMessage += "JSONSerialization Error: \(parseError.localizedDescription)\n"
+            return
+        }
+        if let response = response {
+            guard let array = response["result"] as? [Any] else {
+                errorMessage += "Dictionary does not contain results key\n"
+                return
+            }
+            var index = 0
+            for beerDictionary in array {
+                if let beerDictionary = beerDictionary as? JSONDictionary,
+                let beerId = beerDictionary["id"] as? String,
+                let beerName = beerDictionary["name"] as? String,
+                let beerDescription = beerDictionary["description"] as? String,
+                let beerImageURL = beerDictionary["image_url"] as? String {
+                    beers.append(Beers(id: beerId, name: beerName, description: beerDescription, imageURL: beerImageURL))
+                    index += 1
+                }
+            }
+        } else {
+            errorMessage += "Response Unwrapping Error, Parse Error\n"
         }
     }
 }

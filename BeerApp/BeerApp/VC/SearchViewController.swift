@@ -24,6 +24,7 @@ class SearchViewController: UIViewController {
     }()
     
     var searchResult: [Beers] = []
+    let queryService = QueryService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,13 +62,16 @@ class SearchViewController: UIViewController {
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return searchResult.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: BeerSearchTableViewCell.reuseIdentifier, for: indexPath) as? BeerSearchTableViewCell else {
             return UITableViewCell()
         }
+//        let searchResultIndexPathRow = searchResult[indexPath.row]
+//        cell.searchBeerIdLabel.text = searchResultIndexPathRow.id
+        
         return cell
     }
 }

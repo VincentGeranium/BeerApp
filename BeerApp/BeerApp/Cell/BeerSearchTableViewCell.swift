@@ -12,7 +12,7 @@ class BeerSearchTableViewCell: UITableViewCell {
     
     static let reuseIdentifier: String = "BeerSearchTableViewCell"
     
-    private let searchBeerImageView: UIImageView = {
+    let searchBeerImageView: UIImageView = {
         var searchBeerImageView: UIImageView = UIImageView()
         searchBeerImageView.backgroundColor = .systemOrange
 //        searchBeerImageView.contentMode = .scaleAspectFit
@@ -20,7 +20,7 @@ class BeerSearchTableViewCell: UITableViewCell {
         return searchBeerImageView
     }()
     
-    private let searchBeerIdLabel: UILabel = {
+    let searchBeerIdLabel: UILabel = {
         var searchBeerIdLabel: UILabel = UILabel()
         searchBeerIdLabel.backgroundColor = .systemPink
         searchBeerIdLabel.textAlignment = .center
@@ -29,7 +29,7 @@ class BeerSearchTableViewCell: UITableViewCell {
         return searchBeerIdLabel
     }()
     
-    private let searchBeerNameLabel: UILabel = {
+    let searchBeerNameLabel: UILabel = {
         var searchBeerNameLabel: UILabel = UILabel()
         searchBeerNameLabel.backgroundColor = .systemPurple
         searchBeerNameLabel.textAlignment = .center
@@ -38,28 +38,28 @@ class BeerSearchTableViewCell: UITableViewCell {
         return searchBeerNameLabel
     }()
     
-    private let searchBeerDescriptionLabel: UILabel = {
+    let searchBeerDescriptionLabel: UILabel = {
         var searchBeerDescriptionLabel: UILabel = UILabel()
         searchBeerDescriptionLabel.backgroundColor = .systemBlue
         searchBeerDescriptionLabel.textAlignment = .center
         searchBeerDescriptionLabel.lineBreakMode = .byWordWrapping
         searchBeerDescriptionLabel.numberOfLines = 0
         searchBeerDescriptionLabel.textColor = UIColor.systemGray
-        searchBeerDescriptionLabel.text = """
-        I'm on my second guess Or maybe my second best
-        What do I have to do?
-        To know that I'm getting through
-        I don't have much to say Just hoping you'd come my way What do
-        I have to do? To come and get close to you Come get close to you Baby
-        I won't slow down and
-        I won't say when Tell me why
-        I be comin' round again
-        I'm ready to go again Baby
-        I won't slow down and
-        I won't say no Just one look and
-        I think it starts to show
-        I think that I already know
-        """
+//        searchBeerDescriptionLabel.text = """
+//        I'm on my second guess Or maybe my second best
+//        What do I have to do?
+//        To know that I'm getting through
+//        I don't have much to say Just hoping you'd come my way What do
+//        I have to do? To come and get close to you Come get close to you Baby
+//        I won't slow down and
+//        I won't say when Tell me why
+//        I be comin' round again
+//        I'm ready to go again Baby
+//        I won't slow down and
+//        I won't say no Just one look and
+//        I think it starts to show
+//        I think that I already know
+//        """
         return searchBeerDescriptionLabel
     }()
     
