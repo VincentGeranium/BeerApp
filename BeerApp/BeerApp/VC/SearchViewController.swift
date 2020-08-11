@@ -12,7 +12,7 @@ class SearchViewController: UIViewController {
     
     private let searchController: UISearchController = {
         var searchController: UISearchController = UISearchController(searchResultsController: nil)
-        searchController.obscuresBackgroundDuringPresentation = true
+        searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "맥주 ID를 입력해주세요."
         return searchController
     }()
@@ -24,7 +24,9 @@ class SearchViewController: UIViewController {
     }()
     
     var searchResult: [Beers] = []
+    var beerData: [Beers] = []
     let queryService = QueryService()
+//    var filteredData
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,10 +59,14 @@ class SearchViewController: UIViewController {
             searchTableView.bottomAnchor.constraint(equalTo: guide.bottomAnchor),
         ])
     }
+    
+    private func filterContentsForSearchText(_ searchText: String) {
+        
+    }
 
 }
 
-extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchResult.count
     }
@@ -73,5 +79,15 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 //        cell.searchBeerIdLabel.text = searchResultIndexPathRow.id
         
         return cell
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        self.searchResult = self.beerData.filter({ (beerData:Beers) -> Bool in
+            let id = beerData.id
+            let name = beerData.name
+            let imgURL = beerData.imageURL
+            let description = beerData.description
+            return true
+        })
     }
 }
