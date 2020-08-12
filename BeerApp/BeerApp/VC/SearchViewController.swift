@@ -12,11 +12,11 @@ class SearchViewController: UIViewController {
     
     private let searchController: UISearchController = {
         var searchController: UISearchController = UISearchController(searchResultsController: nil)
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "맥주 ID를 입력해주세요."
+        
         return searchController
     }()
     
+
     private let searchTableView: UITableView = {
         var searchTableView: UITableView = UITableView()
         searchTableView.register(BeerSearchTableViewCell.self, forCellReuseIdentifier: BeerSearchTableViewCell.reuseIdentifier)
@@ -39,10 +39,11 @@ class SearchViewController: UIViewController {
         self.view.backgroundColor = .systemOrange
         self.title = "ID 검색"
         
-        navigationItem.searchController = searchController
         
+        self.navigationItem.searchController = searchController
         
         setUpSearchTableView()
+        
     }
     
     private func setUpSearchTableView() {
@@ -59,14 +60,12 @@ class SearchViewController: UIViewController {
             searchTableView.bottomAnchor.constraint(equalTo: guide.bottomAnchor),
         ])
     }
+
     
-    private func filterContentsForSearchText(_ searchText: String) {
-        
-    }
 
 }
 
-extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchResult.count
     }
@@ -75,19 +74,15 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
         guard let cell = tableView.dequeueReusableCell(withIdentifier: BeerSearchTableViewCell.reuseIdentifier, for: indexPath) as? BeerSearchTableViewCell else {
             return UITableViewCell()
         }
-//        let searchResultIndexPathRow = searchResult[indexPath.row]
-//        cell.searchBeerIdLabel.text = searchResultIndexPathRow.id
         
         return cell
     }
-    
+}
+
+extension SearchViewController: UISearchControllerDelegate, UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        self.searchResult = self.beerData.filter({ (beerData:Beers) -> Bool in
-            let id = beerData.id
-            let name = beerData.name
-            let imgURL = beerData.imageURL
-            let description = beerData.description
-            return true
-        })
+        print("a")
     }
+    
+    
 }
